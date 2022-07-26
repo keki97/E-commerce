@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Full Limited Edition Sneakers</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <nav class="nav-bar">
+        <h1 class="nav-bar-header">sneakers</h1>
+        <ul class="nav-bar-list toggle">
+          <li><a class="nav-bar-links" href="#">Collection</a></li>
+          <li><a class="nav-bar-links" href="#">Men</a></li>
+          <li><a class="nav-bar-links" href="#">Women</a></li>
+          <li><a class="nav-bar-links" href="#">About</a></li>
+          <li><a class="nav-bar-links" href="#">Contact</a></li>
+        </ul>
+        <div class="flex">
+        <ion-icon class="nav-bar-icon" name="cart-outline"></ion-icon>
+        
+        <img
+          src="tyler-nix-portrait.jpg"
+          alt="Portait picture of Tyler Nix"
+          class="nav-bar-img"
+        /></div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="menu-btn" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </nav>
+      <main class="main-section">
+        <div>
+          <div class="main-images">
+            <img
+              src="sneaker-1.jpg"
+              alt="Picture of a sneaker"
+              class="main-img main-sneaker-one"
+            />
+            <img
+              src="sneaker-2.jpg"
+              alt="Picture of a sneaker"
+              class="main-img main-sneaker-two hidden"
+            />
+            <img
+              src="sneaker-3.jpg"
+              alt="Picture of a sneaker"
+              class="main-img main-sneaker-three hidden"
+            />
+            <img
+              src="sneaker-4.jpg"
+              alt="Picture of a sneaker"
+              class="main-img main-sneaker-four hidden"
+            />
+
+            <button class="btn main-btn-left">
+              <ion-icon
+                class="chevron-icon"
+                name="chevron-back-outline"
+              ></ion-icon>
+            </button>
+            <button class="btn main-btn-right">
+              <ion-icon
+                class="chevron-icon"
+                name="chevron-forward-outline"
+              ></ion-icon>
+            </button>
+          </div>
+          <div class="modal-images">
+            <img
+              src="sneaker-1.jpg"
+              alt="Picture of a sneaker"
+              class="modal-img sneaker-one active"
+            />
+
+            <img
+              src="sneaker-2.jpg"
+              alt="Picture of a sneaker"
+              class="modal-img sneaker-two"
+            />
+
+            <img
+              src="sneaker-3.jpg"
+              alt="Picture of a sneaker"
+              class="modal-img sneaker-three"
+            />
+
+            <img
+              src="sneaker-4.jpg"
+              alt="Picture of a sneaker"
+              class="modal-img sneaker-four"
+            />
+          </div>
+        </div>
+        <div class="main-product-info">
+          <h3 class="tertiary-heading">Sneaker company</h3>
+          <h2 class="secondary-heading">
+            Fall Limited Edition<br />
+            Sneakers
+          </h2>
+          <p class="product-info">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they'll withstand everything
+            the weather can offer.
+          </p>
+          <div class="price-container">
+            <span class="price">$125.00</span>
+            <p class="old-price">$250.00</p>
+          </div>
+          <div class="center-elements">
+            <div class="quantity-section">
+              <button class="btns-up-down down">&#8722;</button
+              ><input type="number" value="0" class="quantity"></input>
+              <button class="btns-up-down up">&plus;</button>
+            </div>
+            <div class="cta-div">
+              <a href="checkout.html" class="cta-btn"
+                ><ion-icon class="cta-icon" name="cart-outline"></ion-icon>
+                <span>Add to cart</span></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="modal hidden">
+          <div class="primary-img-container">
+            <img
+              name="slider"
+              src="sneaker-1.jpg"
+              alt="Picture of a sneaker"
+              class="img-primary"
+            />
+            <button class="btn btn-left">
+              <ion-icon
+                class="chevron-icon"
+                name="chevron-back-outline"
+              ></ion-icon>
+            </button>
+            <button class="btn btn-right">
+              <ion-icon
+                class="chevron-icon"
+                name="chevron-forward-outline"
+              ></ion-icon>
+            </button>
+          </div>
+          <div class="secondary-img-container">
+            <img
+              src="sneaker-1.jpg"
+              alt="Picture of a sneaker"
+              class="img-secondary"
+            />
+            <img
+              src="sneaker-2.jpg"
+              alt="Picture of a sneaker"
+              class="img-secondary"
+            />
+            <img
+              src="sneaker-3.jpg"
+              alt="Picture of a sneaker"
+              class="img-secondary"
+            />
+            <img
+              src="sneaker-4.jpg"
+              alt="Picture of a sneaker"
+              class="img-secondary"
+            />
+          </div>
+          <ion-icon class="close" name="close-outline"></ion-icon>
+        </div>
+        <div class="overlay hidden"></div>
+      </main>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="script.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
