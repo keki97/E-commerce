@@ -227,6 +227,10 @@ body {
   flex-shrink: 1;
 }
 
+.total-price {
+  font-weight: bold;
+}
+
 .main-btn-right {
   display: none;
 }
@@ -326,7 +330,7 @@ body {
   gap: 16px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 954px) {
   .main-section {
     gap: 32px;
     margin: 48px 24px;
@@ -361,7 +365,7 @@ body {
   }
 }
 
-@media (max-width: 770px) {
+@media (max-width: 860px) {
   body {
     height: auto;
   }
@@ -572,5 +576,9 @@ body {
     max-width: 100%;
     flex-grow: 0;
     flex-shrink: 1;
+  }
+
+  .total-price {
+    text-align: center;
   }
 }

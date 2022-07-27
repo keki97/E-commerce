@@ -5,6 +5,7 @@ const modalImg = document.querySelector(".modal-img");
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 const close = document.querySelector(".close");
+const totalPrice = document.querySelector(".total-price");
 let quantity = 0;
 
 // IMAGES TOGGLE CLASSES (POSSIBLY COULD BE BETTER, CLEANER)
@@ -67,23 +68,6 @@ overlay.addEventListener("click", function () {
   overlay.classList.add("hidden");
 });
 
-// QUANTITY OF THE SHOES
-
-document.querySelector(".up").addEventListener("click", function () {
-  quantity++;
-  document.querySelector(".quantity").value = quantity;
-});
-
-document.querySelector(".down").addEventListener("click", function () {
-  quantity--;
-  if (quantity >= 1) {
-    document.querySelector(".quantity").value = quantity;
-  } else {
-    quantity = 0;
-    document.querySelector(".quantity").value = quantity;
-  }
-});
-
 // MODAL SLIDER
 let i = 0;
 const modalImages = [
@@ -121,6 +105,28 @@ document.querySelector(".btn-left").addEventListener("click", function () {
   slideImagesLeft();
 });
 
+// QUANTITY OF THE SHOES
+
+document.querySelector(".up").addEventListener("click", function () {
+  quantity++;
+  document.querySelector(".quantity").value = quantity;
+  totalPrice.textContent = quantity * 125;
+});
+
+document.querySelector(".down").addEventListener("click", function () {
+  quantity--;
+  if (quantity >= 1) {
+    document.querySelector(".quantity").value = quantity;
+    totalPrice.textContent = quantity * 125;
+  } else {
+    quantity = 0;
+    document.querySelector(".quantity").value = quantity;
+    totalPrice.textContent = "";
+  }
+});
+
+// TOTAL PRICE
+
 // Local storage
 
 const addToCartBtn = document.querySelector(".cta-div");
@@ -129,13 +135,16 @@ addToCartBtn.addEventListener("click", function () {
   const nameCheckout = document.querySelector(".secondary-heading").textContent;
   const priceCheckout = document.querySelector(".price").textContent;
   const quantityCheckout = document.querySelector(".quantity").value;
+  const totalPriceCheckout = totalPrice.textContent;
 
   localStorage.setItem("name", "Fall Limited Edition Sneakers");
   localStorage.setItem("price", priceCheckout);
   localStorage.setItem("quantity", quantityCheckout);
+  localStorage.setItem('total-price', totalPriceCheckout)
 
   localStorage.getItem("name");
   localStorage.getItem("price");
   localStorage.getItem("quantaty");
+  localStorage.getItem('total-price');
   console.log(localStorage);
 });
