@@ -5,6 +5,7 @@ const modalImg = document.querySelector(".modal-img");
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 const close = document.querySelector(".close");
+const price = document.querySelector(".price-num");
 const totalPrice = document.querySelector(".total-price");
 let quantity = 0;
 
@@ -110,14 +111,14 @@ document.querySelector(".btn-left").addEventListener("click", function () {
 document.querySelector(".up").addEventListener("click", function () {
   quantity++;
   document.querySelector(".quantity").value = quantity;
-  totalPrice.textContent = quantity * 125;
+  totalPrice.textContent = `$${quantity * Number(price.textContent)}`;
 });
 
 document.querySelector(".down").addEventListener("click", function () {
   quantity--;
   if (quantity >= 1) {
     document.querySelector(".quantity").value = quantity;
-    totalPrice.textContent = quantity * 125;
+    totalPrice.textContent = `$${quantity * Number(price.textContent)}`;
   } else {
     quantity = 0;
     document.querySelector(".quantity").value = quantity;
@@ -140,11 +141,11 @@ addToCartBtn.addEventListener("click", function () {
   localStorage.setItem("name", "Fall Limited Edition Sneakers");
   localStorage.setItem("price", priceCheckout);
   localStorage.setItem("quantity", quantityCheckout);
-  localStorage.setItem('total-price', totalPriceCheckout)
+  localStorage.setItem("total-price", totalPriceCheckout);
 
   localStorage.getItem("name");
   localStorage.getItem("price");
   localStorage.getItem("quantaty");
-  localStorage.getItem('total-price');
+  localStorage.getItem("total-price");
   console.log(localStorage);
 });

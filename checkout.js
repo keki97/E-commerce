@@ -11,4 +11,4 @@ document.querySelector(
 ).innerHTML = `Quantity: ${localStorage.getItem("quantity")}`;
 document.querySelector(
   ".total-price-checkout"
-).innerHTML = `Total price: $${localStorage.getItem("total-price")}`;
+).innerHTML = `Total price: ${localStorage.getItem("total-price")}`;
