@@ -26,7 +26,7 @@
           <li><a class="nav-bar-links" href="#">Contact</a></li>
         </ul>
         <div class="flex">
-        <ion-icon class="nav-bar-icon" name="cart-outline"></ion-icon>
+          <a class="cart-link" hfre="checkout.html"><ion-icon class="nav-bar-icon" name="cart-outline"></ion-icon></a>
         
         <img
           src="tyler-nix-portrait.jpg"
@@ -102,10 +102,7 @@
         </div>
         <div class="main-product-info">
           <h3 class="tertiary-heading">Sneaker company</h3>
-          <h2 class="secondary-heading">
-            Fall Limited Edition<br />
-            Sneakers
-          </h2>
+          <h2 class="secondary-heading">Fall Limited Edition Sneakers</h2>
           <p class="product-info">
             These low-profile sneakers are your perfect casual wear companion.
             Featuring a durable rubber outer sole, they'll withstand everything
@@ -122,7 +119,7 @@
               <button class="btns-up-down up">&plus;</button>
             </div>
             <div class="cta-div">
-              <a href="checkout.html" class="cta-btn"
+              <a href="#" class="cta-btn"
                 ><ion-icon class="cta-icon" name="cart-outline"></ion-icon>
                 <span>Add to cart</span></a
               >
@@ -177,6 +174,9 @@
         </div>
         <div class="overlay hidden"></div>
       </main>
+      <div class="alert alert-hidden">Quantity can't be 0! Please increase quantity and proceed to our checkout page
+        <ion-icon class="close-alert" name="close-outline"></ion-icon>
+      </div>
     </div>
     <script
       type="module"

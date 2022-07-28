@@ -125,7 +125,6 @@ document.querySelector(".down").addEventListener("click", function () {
     totalPrice.textContent = "";
   }
 });
-
 // TOTAL PRICE
 
 // Local storage
@@ -137,15 +136,35 @@ addToCartBtn.addEventListener("click", function () {
   const priceCheckout = document.querySelector(".price").textContent;
   const quantityCheckout = document.querySelector(".quantity").value;
   const totalPriceCheckout = totalPrice.textContent;
+  const quantitySectionCheckout =
+    document.querySelector(".quantity-section").innerHTML;
 
-  localStorage.setItem("name", "Fall Limited Edition Sneakers");
+  localStorage.setItem("name", nameCheckout);
   localStorage.setItem("price", priceCheckout);
   localStorage.setItem("quantity", quantityCheckout);
   localStorage.setItem("total-price", totalPriceCheckout);
+  localStorage.removeItem("quantity-section", quantitySectionCheckout);
 
   localStorage.getItem("name");
   localStorage.getItem("price");
   localStorage.getItem("quantaty");
   localStorage.getItem("total-price");
-  console.log(localStorage);
+
+  document
+    .querySelector(".nav-bar-icon")
+    .addEventListener("click", function () {
+      if (quantity !== 0) {
+        document
+          .querySelector(".cart-link")
+          .setAttribute("href", "checkout.html");
+        document.querySelector(".nav-bar-icon").style.none = "none";
+      } else {
+        document.querySelector(".cart-link").setAttribute("href", "#");
+        document.querySelector(".alert").classList.remove("alert-hidden");
+      }
+    });
+
+  document.querySelector(".close-alert").addEventListener("click", function () {
+    document.querySelector(".alert").classList.add("alert-hidden");
+  });
 });
